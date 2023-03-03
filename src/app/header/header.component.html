@@ -1,9 +1,9 @@
-<p-megaMenu [model]="items" (change)="onChangeSelectItems($event)">
+<p-megaMenu [model]="items" (click)="onChangeSelectItems($event)">
   <input type="text" pInputText placeholder="Search" />
   &nbsp;&nbsp;&nbsp;&nbsp;
   <button pButton label="Logout" icon="pi pi-sign-out"></button>
 </p-megaMenu>
-<app-templates-filler></app-templates-filler>
+
 <app-templates-filler
   *ngIf="condShowScreen == 'templates-filler'"
 ></app-templates-filler>

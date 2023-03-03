@@ -31,4 +31,6 @@ export class TemplatesFillerComponent implements OnInit {
     // this.version_all = this.versions_available[idx_template];
     // this.version_selected = this.version_all[0]
   }
+
+  showPopup() {}
 }

@@ -1,4 +1,23 @@
 <div style="height:30px;"></div>
+
+<p-panel header="Template Filler" [toggleable]="true">
+  <ng-template pTemplate="icons">
+    <p-button
+      type="button"
+      href="javascript:void(0)"
+      (click)="showPopup()"
+      class="btn btn-danger button_consolidation_info"
+      style="text-decoration:none;"
+    >
+      Consolidation Info
+    </p-button>
+  </ng-template>
+
+  <div class="row">
+    <div class="col-12">prueba</div>
+  </div>
+</p-panel>
+<div style="height:30px;"></div>
 <p-panel header="Template Download" [toggleable]="true">
   <div class="row">
     <div class="col-12">
@@ -19,5 +38,11 @@
   </div>
   <div class="row">
     {{ template_name }}
+  </div>
+</p-panel>
+<div style="height:30px;"></div>
+<p-panel header="Template Filler Table" [toggleable]="true">
+  <div class="row">
+    <div class="col-12">prueba</div>
   </div>
 </p-panel>
