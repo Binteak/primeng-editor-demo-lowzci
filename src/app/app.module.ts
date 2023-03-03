@@ -35,12 +35,16 @@ import { StepsModule } from 'primeng/steps';
 import { CardModule } from 'primeng/card';
 import { PanelModule } from 'primeng/panel';
 
+import { MegaMenuModule } from 'primeng/megamenu';
+
 import { HeaderComponent } from './header/header.component';
 import { VarcontentComponent } from './varcontent/varcontent.component';
 import { TemplatesFillerComponent } from './templates-filler/templates-filler.component';
+import { SummaryComponent } from './summary/summary.component';
 
 @NgModule({
   imports: [
+    MegaMenuModule,
     BrowserModule,
     BrowserAnimationsModule,
     EditorModule,
@@ -78,6 +82,7 @@ import { TemplatesFillerComponent } from './templates-filler/templates-filler.co
     HeaderComponent,
     VarcontentComponent,
     TemplatesFillerComponent,
+    SummaryComponent,
   ],
   bootstrap: [AppComponent],
 })

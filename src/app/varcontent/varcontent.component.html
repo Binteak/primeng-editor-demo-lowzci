@@ -1,34 +1,4 @@
-<div class="container py-5">
-  <div class="row">
-    <div class="col-3">
-      <div class="nav flex-column nav-pills" role="tablist">
-        <a class="nav-link text-uppercase active" href="#" role="tab">Home</a>
-        <a class="nav-link text-uppercase" href="#" role="tab">Profile</a>
-        <a class="nav-link text-uppercase" href="#" role="tab">Messages</a>
-        <a class="nav-link text-uppercase" href="#" role="tab">Settings</a>
-      </div>
-    </div>
-
-    <div class="col-9">
-      <h4 class="font-cambo mb-3">Organisations</h4>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
-        eveniet, quisquam quod minus quae nulla earum molestiae eos autem
-        tempore, est consequuntur, quam dignissimos recusandae dolores eaque.
-        Ut, quaerat doloribus?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
-        eveniet, quisquam quod minus quae nulla earum molestiae eos autem
-        tempore, est consequuntur, quam dignissimos recusandae dolores eaque.
-        Ut, quaerat doloribus?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
-        eveniet, quisquam quod minus quae nulla earum molestiae eos autem
-        tempore, est consequuntur, quam dignissimos recusandae dolores eaque.
-        Ut, quaerat doloribus?
-      </p>
-    </div>
-  </div>
-</div>
+<app-templates-filler
+  *ngIf="condShowScreen == 'templates-filler'"
+></app-templates-filler>
+<app-summary *ngIf="condShowScreen == 'summary'"></app-summary>
