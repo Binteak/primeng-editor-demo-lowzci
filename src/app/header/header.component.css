@@ -1,0 +1,90 @@
+.logoSantander {
+  max-width: 10vw;
+}
+
+.navbar {
+  background-color: #ec0000;
+}
+
+.navbar a {
+  color: white;
+}
+
+.dropdown-menu a {
+  color: black;
+}
+
+.boton_equis {
+  cursor: pointer;
+}
+
+.screenHoverSelector:hover {
+  transition: all 0.02s ease-out;
+  background-color: #ff2828;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.screenHoverSelector2 {
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+.screenHoverSelector2:hover {
+  background-color: #ff2828;
+  border-radius: 10%;
+  color: white;
+  padding: 25px 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  /*     font-size:16px; */
+}
+
+.screenHoverSelector3:hover {
+  background-color: #ff2828;
+  border-radius: 10%;
+  color: white;
+  padding-left: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+  /*     font-size:16px; */
+}
+
+.nav2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.nav2 ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav2 ul li {
+  flex: 1;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.nav2 ul li a {
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+}

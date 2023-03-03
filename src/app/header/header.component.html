@@ -1,3 +1,13 @@
+<!-- <nav class = "nav2">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav> -->
+
 <nav
   [style]="paddingBottomNavContent"
   class="navbar navbar-dark red lighten-1 shadow"
@@ -13,18 +23,19 @@
     }
   </style>
 
+  <!--Menú Izquierda con Logo Santander-->
   <div class="row">
     <div
       style="padding-left:16px!important;padding-bottom:8px!important;"
       class=""
     >
       <img
-        src="./assets/img/Santander.svg"
+        src="/assets/img/Santander.svg"
         alt="Not found"
         style="width:18px; height:18px;"
       />&nbsp;
       <img
-        src="./assets/img/Santander_Logo_Menu.png"
+        src="/assets/img/Santander_Logo_Menu.png"
         alt="Not found"
         style="width:99px; height:26.5px;"
       />
@@ -144,4 +155,306 @@
     </ul>
   </div>
   <!--Menú Derecha con Logout - END-->
+
+  <!-- Contenido Menú Colapsable -->
+  <div
+    class="navbar-collapse shadow"
+    [style]="menuStyle"
+    id="navbarSupportedContent23"
+  >
+    <br />
+
+    <div
+      style="padding-left:15px!important;padding-bottom:15px!important;"
+      class="row"
+    >
+      <div class="col-2">
+        <ul class="navbar-nav mr-auto">
+          <strong style="font-size:14px;padding-left:10px!important;color:#fff"
+            >Data Management</strong
+          >
+          <hr
+            align="left"
+            style="width:100%;border-color:white;
+                                    
+                                      margin-left:10px!important;
+                                      margin-right:10px!important;
+                                      margin-top:5px!important;
+                                      margin-bottom:10px!important;"
+          />
+
+          <li class="nav-item">
+            <a
+              style="padding-left:10px!important;font-size:14px;"
+              style="text-decoration: none;"
+              class="collapse-item screenHoverSelector"
+              href="/upload-data/"
+            >
+              &nbsp;&nbsp;<em class="pi pi-file-excel"></em>&nbsp;&nbsp;<span
+                >Data Uploading</span
+              >
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              style="padding-left:10px!important;font-size:14px;"
+              style="text-decoration: none;"
+              class="collapse-item screenHoverSelector"
+              href="/upload-rea/"
+            >
+              &nbsp;&nbsp;<em class="pi pi-file-excel"></em>&nbsp;&nbsp;<span
+                >REA Uploading</span
+              >
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              style="padding-left:10px!important;font-size:14px;"
+              style="text-decoration: none;"
+              class="collapse-item screenHoverSelector"
+              href="/upload-template/"
+            >
+              &nbsp;&nbsp;<em class="pi pi-file-excel"></em>&nbsp;&nbsp;<span
+                >Template Uploading</span
+              >
+            </a>
+          </li>
+          <!--                 <li class="nav-item">
+                  <a style="padding-left:10px!important;font-size:14px;" class="collapse-item screenHoverSelector"  href="#"
+                  routerLink="/upload-data" style="text-decoration: none;" routerLinkActive="active">
+                      &nbsp;&nbsp;<em class="pi pi-file-excel"></em>&nbsp;<span>Data Uploading</span>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a style="padding-left:10px!important;font-size:14px;" class="collapse-item screenHoverSelector"  href="#"
+                  routerLink="/upload-rea" style="text-decoration: none;" routerLinkActive="active">
+                      &nbsp;&nbsp;<em class="pi pi-file-excel"></em>&nbsp;<span>REA Uploading</span>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a style="padding-left:10px!important;font-size:14px;" class="collapse-item screenHoverSelector"  href="#"
+                  routerLink="/upload-template" style="text-decoration: none;" routerLinkActive="active">
+                      &nbsp;&nbsp;<em class="pi pi-file-excel"></em>&nbsp;<span>Template Uploading</span>
+                  </a>
+              </li> -->
+          <!--                 <li class="nav-item">
+                  <a style="padding-left:10px!important;" class="collapse-item"  href="#"
+                  routerLink="/data-extraction" routerLinkActive="active">
+                      <em class="pi pi-file-excel"></em>&nbsp;<span>Data Extraction</span>
+                  </a>
+              </li> -->
+        </ul>
+        <br />
+      </div>
+
+      <div class="col-2">
+        <ul class="navbar-nav mr-auto">
+          <strong style="font-size:14px;padding-left:10px!important;color:#fff"
+            >Consolidation</strong
+          >
+          <hr
+            align="left"
+            style="width:100%;border-color:white;
+                                  margin-left:10px!important;
+                                      margin-right:10px!important;
+                                      margin-top:5px!important;
+                                      margin-bottom:10px!important;
+                                  "
+          />
+          <li class="nav-item">
+            <a
+              style="padding-left:10px!important;font-size:14px;"
+              style="text-decoration: none;"
+              class="collapse-item screenHoverSelector"
+              href="/consolidation/"
+            >
+              &nbsp;&nbsp;<em class="pi pi-cog"></em>&nbsp;&nbsp;<span
+                >Consolidation</span
+              >
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              style="padding-left:10px!important;font-size:14px;"
+              style="text-decoration: none;"
+              class="collapse-item screenHoverSelector"
+              href="/consolidation-visualization/"
+            >
+              &nbsp;&nbsp;<em class="pi pi-chart-line"></em>&nbsp;&nbsp;<span
+                >Cons. Visualization</span
+              >
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              style="padding-left:10px!important;font-size:14px;"
+              style="text-decoration: none;"
+              class="collapse-item screenHoverSelector"
+              href="/summary/"
+            >
+              &nbsp;&nbsp;<em class="pi pi-chart-line"></em>&nbsp;&nbsp;<span
+                >Summary</span
+              >
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              style="padding-left:10px!important;font-size:14px;"
+              style="text-decoration: none;"
+              class="collapse-item screenHoverSelector"
+              href="/dashboard-process/"
+            >
+              &nbsp;&nbsp;<em class="pi pi-desktop"></em>&nbsp;&nbsp;<span
+                >Dashboard process</span
+              >
+            </a>
+          </li>
+        </ul>
+        <br />
+      </div>
+
+      <div class="col-2">
+        <ul class="navbar-nav mr-auto">
+          <strong style="font-size:14px;padding-left:10px!important;color:#fff"
+            >Templates</strong
+          >
+          <hr
+            align="left"
+            style="width:100%;border-color:white;
+                                  
+                                  margin-left:10px!important;
+                                      margin-right:10px!important;
+                                      margin-top:5px!important;
+                                      margin-bottom:10px!important;
+                                  "
+          />
+          <li class="nav-item">
+            <a
+              style="padding-left:10px!important;font-size:14px;"
+              style="text-decoration: none;"
+              class="collapse-item screenHoverSelector"
+              href="/templates-filler/"
+            >
+              &nbsp;&nbsp;<em class="pi pi-cog"></em>&nbsp;&nbsp;<span
+                >Templates Filler</span
+              >
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-2">
+        <ul class="navbar-nav mr-auto">
+          <strong style="font-size:14px;padding-left:10px!important;color:#fff"
+            >Starting Points Generator</strong
+          >
+          <hr
+            align="left"
+            style="width:100%;border-color:white;
+                                  
+                                  margin-left:10px!important;
+                                      margin-right:10px!important;
+                                      margin-top:5px!important;
+                                      margin-bottom:10px!important;
+                                  "
+          />
+          <li class="nav-item">
+            <a
+              style="padding-left:10px!important;font-size:14px;"
+              style="text-decoration: none;"
+              class="collapse-item screenHoverSelector"
+              href="/upload-hive/"
+            >
+              &nbsp;&nbsp;<em class="pi pi-file-excel"></em>&nbsp;&nbsp;<span
+                >Hive Config Table</span
+              >
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              style="padding-left:10px!important;font-size:14px;"
+              style="text-decoration: none;"
+              class="collapse-item screenHoverSelector"
+              href="/data-extraction/"
+            >
+              &nbsp;&nbsp;<em class="pi pi-cog"></em>&nbsp;&nbsp;<span
+                >Data Extraction</span
+              >
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              style="padding-left:10px!important;font-size:14px;"
+              style="text-decoration: none;"
+              class="collapse-item screenHoverSelector"
+              href="/data-preparation/"
+            >
+              &nbsp;&nbsp;<em class="pi pi-cog"></em>&nbsp;&nbsp;<span
+                >Data Preparation</span
+              >
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              style="padding-left:10px!important;font-size:14px;"
+              style="text-decoration: none;"
+              class="collapse-item screenHoverSelector"
+              href="/marginals/"
+            >
+              &nbsp;&nbsp;<em class="pi pi-cog"></em>&nbsp;&nbsp;<span
+                >Marginals</span
+              >
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              style="padding-left:10px!important;font-size:14px;"
+              style="text-decoration: none;"
+              class="collapse-item screenHoverSelector"
+              href="/data-merge/"
+            >
+              &nbsp;&nbsp;<em class="pi pi-cog"></em>&nbsp;&nbsp;<span
+                >Data Merge</span
+              >
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              style="padding-left:10px!important;font-size:14px;"
+              style="text-decoration: none;"
+              class="collapse-item screenHoverSelector"
+              href="/reconciliation/"
+            >
+              &nbsp;&nbsp;<em class="pi pi-cog"></em>&nbsp;&nbsp;<span
+                >Reconciliation</span
+              >
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a
+              style="padding-left:10px!important;font-size:14px;"
+              style="text-decoration: none;"
+              class="collapse-item screenHoverSelector"
+              href="/agregation/"
+            >
+              &nbsp;&nbsp;<em class="pi pi-cog"></em>&nbsp;&nbsp;<span
+                >Agregation</span
+              >
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        style="padding-bottom:50px!important;margin-bottom:50px!important;"
+      ></div>
+    </div>
+  </div>
+
+  <br />
+  <br />
 </nav>
+
+<app-templates-filler></app-templates-filler>
