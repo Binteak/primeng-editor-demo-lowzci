@@ -13,16 +13,52 @@
     </p-button>
   </ng-template>
 
-  <div class="row">
-    <div class="col-12">prueba</div>
+  <div
+    class="grid"
+    style="
+  display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
+  "
+  >
+    <div class="col">
+      <strong>Choose a template to fill:</strong>
+
+      <p-dropdown
+        #template_to_fill
+        placeholder="Choose a Template to Fill"
+        (onChange)="onChangeTemplate(template.value)"
+        [(ngModel)]="template_name"
+        [options]="templates_available"
+        optionLabel="name"
+        [showClear]="false"
+      >
+      </p-dropdown>
+    </div>
+    <div class="col">
+      <strong>Select template version:</strong>
+
+      <p-dropdown
+        #template_version
+        placeholder="Choose a Template to Fill"
+        (onChange)="onChangeTemplate(template.value)"
+        [(ngModel)]="template_name"
+        [options]="templates_available"
+        optionLabel="name"
+        [showClear]="false"
+      >
+      </p-dropdown>
+    </div>
+    <div class="col">3</div>
   </div>
 </p-panel>
 <div style="height:30px;"></div>
 <p-panel header="Template Download" [toggleable]="true">
-  <div class="row">
-    <div class="col-12">
+  <div class="grid">
+    <div class="col-3">
       <strong>Choose a template to download:</strong>
-
       <p-dropdown
         #template
         placeholder="Choose a Template to Fill"
@@ -35,6 +71,41 @@
       >
       </p-dropdown>
     </div>
+    <div class="col-9">
+      <p-table
+        [value]="elementosSeleccionados"
+        [scrollable]="true"
+        scrollHeight="200px"
+        [style]="{
+          'border-radius': '5px 0px 0px 0px',
+          border: '0.5px solid #d6d5cf'
+        }"
+      >
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Temporary Sheet</th>
+            <th>Exercise Name</th>
+            <th>Engine ID</th>
+          </tr>
+        </ng-template>
+        <ng-template style="height:56.44px" pTemplate="emptymessage">
+          <tr>
+            <td colspan="3">
+              <div style="text-align: center;padding-top:0.5rem;">
+                <h6>No items selected. Please, select a Temporary Sheet.</h6>
+              </div>
+            </td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-elemento>
+          <tr *ngIf="showError !== 'true'">
+            <td>{{ elemento['TMP_SHEET'] }}</td>
+            <td>{{ elemento['EXERCISE_NAME'] }}</td>
+            <td>{{ cons_id }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
   </div>
   <div class="row">
     {{ template_name }}
@@ -42,7 +113,116 @@
 </p-panel>
 <div style="height:30px;"></div>
 <p-panel header="Template Filler Table" [toggleable]="true">
-  <div class="row">
-    <div class="col-12">prueba</div>
-  </div>
+  <!-- [value]="all_cons_status"
+  [style]="{ width: '100%' }"
+  [scrollable]="true"
+  scrollHeight="500px" -->
+  <p-table [style]="{ width: '100%' }" [scrollable]="true" scrollHeight="500px">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Consolidation</th>
+        <th>Timestamp</th>
+        <th>Username</th>
+        <th>Template</th>
+        <th>Status</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body"
+      ><!--let-e let-i="rowIndex"-->
+      <!-- <tr>
+        <td>{{ templates_status.CONS_ID[i] }}</td>
+        <td>{{ templates_status.TIMESTAMP[i] }}</td>
+        <td>{{ templates_status.USERNAME[i] }}</td>
+        <td>{{ templates_status.TEMPLATE[i] }}</td>
+        <td
+          [ngStyle]="{
+            color:
+              templates_status.STATUS[i] == 'In progress'
+                ? '#0000ff'
+                : templates_status.STATUS[i] == 'Completed'
+                ? '#00860f'
+                : '#fc0000'
+          }"
+          [ngClass]="{ blink_me: templates_status.STATUS[i] == 'In progress' }"
+        >
+          {{ templates_status.STATUS[i] }}
+        </td>
+      </tr> -->
+      <tr>
+        <td>144</td>
+        <td>2023-03-03 - 13:35:19</td>
+        <td>None</td>
+        <td>EBA_ST23_CRF v3.0.xlsx</td>
+        <td>Completed</td>
+      </tr>
+      <tr>
+        <td>144</td>
+        <td>2023-03-03 - 13:36:26</td>
+        <td>None</td>
+        <td>EBA_ST23_CRF v3.0.xlsx</td>
+        <td>Completed</td>
+      </tr>
+    </ng-template>
+  </p-table>
 </p-panel>
+
+<p-dialog
+  header="Consolidation information"
+  [modal]="true"
+  [draggable]="false"
+  [(visible)]="showConsInfo"
+  [style]="{ width: '50vw' }"
+  [baseZIndex]="10000"
+>
+  <div class="row">
+    <div class="col-12">
+      Consolidation {{ cons_id }} started on: {{ started }} by user:
+      {{ username }}
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-12">
+      <strong>Exercises:</strong> {{ exercises_selected }}
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-12"><strong>Type:</strong> {{ cons_type }}</div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-12"><strong>Include rest:</strong> {{ withrest }}</div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-6">
+      <strong>Units:</strong>
+    </div>
+    <div class="col-6">
+      <strong>Versions:</strong>
+    </div>
+  </div>
+  <div
+    *ngFor="let unit of units_selected; let i = index"
+    class="row"
+    style="justify-content: center; align-items: center;"
+  >
+    <div class="col-md-6">
+      <div
+        style="text-align: center !important; background-color: rgb(242, 242, 242);"
+        class="panel-body form-control"
+      >
+        <!-- {{ units_selected[i] }} -->
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div
+        style="text-align: center !important; background-color: rgb(242, 242, 242);"
+        class="panel-body form-control"
+      >
+        <!-- {{ versions_selected[i] }} -->
+      </div>
+    </div>
+  </div>
+</p-dialog>

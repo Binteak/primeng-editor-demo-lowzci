@@ -11,6 +11,8 @@ export class TemplatesFillerComponent implements OnInit {
   date_all: any[];
   date_selected: any;
 
+  showConsInfo: boolean = false;
+
   constructor() {}
 
   async ngOnInit(): Promise<void> {
@@ -32,5 +34,7 @@ export class TemplatesFillerComponent implements OnInit {
     // this.version_selected = this.version_all[0]
   }
 
-  showPopup() {}
+  showPopup() {
+    this.showConsInfo = true;
+  }
 }
