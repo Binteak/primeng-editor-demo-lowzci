@@ -36,11 +36,10 @@ import { CardModule } from 'primeng/card';
 import { PanelModule } from 'primeng/panel';
 
 import { HeaderComponent } from './header/header.component';
+import { TemplatesFillerComponent } from './templates-filler/templates-filler.component';
 
 @NgModule({
   imports: [
-    AppComponent,
-    HeaderComponent,
     BrowserModule,
     BrowserAnimationsModule,
     EditorModule,
@@ -48,20 +47,16 @@ import { HeaderComponent } from './header/header.component';
     FormsModule,
     DropdownModule,
     BrowserModule,
-
     FormsModule,
     HttpClientModule,
-
     FileUploadModule,
     ButtonModule,
     TableModule,
     DynamicDialogModule,
     DialogModule,
     BrowserAnimationsModule,
-
     ProgressSpinnerModule,
     TooltipModule,
-
     TreeTableModule,
     InputTextModule,
     InputNumberModule,
@@ -77,7 +72,7 @@ import { HeaderComponent } from './header/header.component';
     CardModule,
     PanelModule,
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, HeaderComponent, TemplatesFillerComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

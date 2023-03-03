@@ -1,27 +1,3 @@
-<div style="height:30px;"></div>
-<p-panel header="Template Download" [toggleable]="true">
-  <div class="row">
-    <div class="col-12">
-      <strong>Choose a template to download:</strong>
-
-      <p-dropdown
-        #template
-        placeholder="Choose a Template to Fill"
-        [style]="{ width: '100%' }"
-        (onChange)="onChangeTemplate(template.value)"
-        [(ngModel)]="template_name"
-        [options]="templates_available"
-        optionLabel="name"
-        [showClear]="false"
-      >
-      </p-dropdown>
-    </div>
-  </div>
-  <div class="row">
-    {{ template_name }}
-  </div>
-</p-panel>
-
 <div class="container-fluid px-0 bg-light h-100" id="main">
   <div class="row">
     <div class="col">
@@ -30,9 +6,7 @@
   </div>
   <div class="row p-2">
     <div class="col">
-      <app-notifications></app-notifications>
-      <router-outlet></router-outlet>
-      <app-header></app-header>
+      <app-templates-filler></app-templates-filler>
     </div>
   </div>
 </div>
