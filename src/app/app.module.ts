@@ -36,6 +36,7 @@ import { CardModule } from 'primeng/card';
 import { PanelModule } from 'primeng/panel';
 
 import { HeaderComponent } from './header/header.component';
+import { VarcontentComponent } from './varcontent/varcontent.component';
 import { TemplatesFillerComponent } from './templates-filler/templates-filler.component';
 
 @NgModule({
@@ -72,7 +73,12 @@ import { TemplatesFillerComponent } from './templates-filler/templates-filler.co
     CardModule,
     PanelModule,
   ],
-  declarations: [AppComponent, HeaderComponent, TemplatesFillerComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    VarcontentComponent,
+    TemplatesFillerComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
