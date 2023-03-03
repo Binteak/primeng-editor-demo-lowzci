@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
+  selector: 'app-templates-filler',
+  templateUrl: './templates-filler.component.html',
+  styleUrls: ['./templates-filler.component.css'],
 })
-export class AppComponent {
+export class TemplatesFillerComponent implements OnInit {
   templates_available: any[];
   template_name: any = [];
   date_all: any[];
